@@ -40,6 +40,7 @@ def cityreader(cities=[]):
     # `cities` list
     with open('cities.csv', newline="") as csvfile:
         reader = csv.reader(csvfile)
+        csvfile.readline()
         for row in reader:
             cities.append(City(row[0], row[3], row[4]))
     return cities
